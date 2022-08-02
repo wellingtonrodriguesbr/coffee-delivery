@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
 `;
 
-export const ShoppingCar = styled.div`
+export const ShoppingCartContainer = styled.div`
   display: flex;
   gap: 12px;
   align-items: center;
@@ -26,6 +26,7 @@ export const ButtonAddress = styled.button`
   font-size: 1rem;
   border-radius: 6px;
 `;
+
 export const ButtonCart = styled.button`
   background-color: ${(props) => props.theme["yellow-light"]};
   color: ${(props) => props.theme["yellow-dark"]};
