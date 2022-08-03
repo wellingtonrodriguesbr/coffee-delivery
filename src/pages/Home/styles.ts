@@ -4,7 +4,7 @@ export const HomeContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3.5rem;
   padding: 5.75rem 0;
 
   h1 {
@@ -37,5 +37,14 @@ export const ItemsDescription = styled.div`
       font-size: 1rem;
       color: ${(props) => props.theme["base-text"]};
     }
+  }
+`;
+
+export const CoffeesList = styled.div`
+  margin-top: 2.75rem;
+
+  h2 {
+    font-size: 2rem;
+    color: ${(props) => props.theme["base-title"]};
   }
 `;
