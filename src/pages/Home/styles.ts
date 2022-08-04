@@ -42,9 +42,19 @@ export const ItemsDescription = styled.div`
 
 export const CoffeesList = styled.div`
   margin-top: 2.75rem;
+  padding-bottom: 9.81rem;
 
   h2 {
     font-size: 2rem;
     color: ${(props) => props.theme["base-title"]};
   }
+`;
+
+export const ListContainer = styled.div`
+  width: 100%;
+  margin-top: 3.375rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 4rem;
 `;

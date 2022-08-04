@@ -1,4 +1,9 @@
-import { CoffeesList, HomeContainer, ItemsDescription } from "./styles";
+import {
+  CoffeesList,
+  HomeContainer,
+  ItemsDescription,
+  ListContainer,
+} from "./styles";
 import ImageHero from "../../assets/HeroImage.png";
 import IconCart from "../../assets/icons/cart.svg";
 import IconBox from "../../assets/icons/box.svg";
@@ -6,11 +11,19 @@ import IconTime from "../../assets/icons/time.svg";
 import IconCoffee from "../../assets/icons/coffee.svg";
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
+import { Card } from "../../components/Card";
+
+interface Coffee {
+  id: number;
+  image_url: string;
+  tags: string[];
+  title: string;
+  description: string;
+  price: string;
+}
 
 export function Home() {
-  const [coffesList, setCoffeesList] = useState([]);
-
-  console.log(coffesList);
+  const [coffesList, setCoffeesList] = useState<Coffee[]>([]);
 
   async function getCoffeesList() {
     const { data: list } = await api.get("/data.json");
@@ -54,6 +67,11 @@ export function Home() {
       </HomeContainer>
       <CoffeesList>
         <h2>Nossos cafés</h2>
+        <ListContainer>
+          {coffesList.map((coffee) => (
+            <Card coffee={coffee} key={coffee.id} />
+          ))}
+        </ListContainer>
       </CoffeesList>
     </>
   );
