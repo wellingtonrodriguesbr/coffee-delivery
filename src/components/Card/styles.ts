@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
 export const CardContainer = styled.div`
-  width: 16rem;
-  height: 19.375rem;
+  max-width: 16rem;
+  width: 100%;
+  height: 100%;
+  max-height: 19.375rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   background-color: ${(props) => props.theme["base-card"]};
   border-radius: 6px 36px 6px 36px;
-  position: relative;
+  padding: 0 20px 20px;
+
+  img {
+    margin-top: -20px;
+  }
 
   h3 {
     font-size: 1.25rem;
@@ -20,6 +26,7 @@ export const CardContainer = styled.div`
   p {
     font-size: 0.875rem;
     color: ${(props) => props.theme["base-label"]};
+    text-align: center;
   }
 `;
 
@@ -27,11 +34,65 @@ export const Tags = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-top: 12px;
 
   p {
     color: ${(props) => props.theme["yellow-dark"]};
     background-color: ${(props) => props.theme["yellow-light"]};
     padding: 4px 8px;
     border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+  }
+`;
+
+export const CartContainer = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  p {
+    span {
+      font-family: "Baloo 2";
+      font-size: 1.5rem;
+      color: ${(props) => props.theme["base-text"]};
+    }
+  }
+`;
+
+export const CartButton = styled.div`
+  display: flex;
+  gap: 8px;
+
+  div {
+    background: ${(props) => props.theme["base-button"]};
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 72px;
+    border-radius: 6px;
+
+    span {
+      color: ${(props) => props.theme["base-title"]};
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      background: transparent;
+      color: ${(props) => props.theme.purple};
+      cursor: pointer;
+    }
+  }
+
+  button {
+    border: none;
+    background-color: ${(props) => props.theme["purple-dark"]};
+    color: ${(props) => props.theme["base-card"]};
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
   }
 `;

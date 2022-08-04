@@ -1,17 +1,22 @@
-import { CardContainer, Tags } from "./styles";
+import { Minus, Plus, ShoppingCart, ShoppingCartSimple } from "phosphor-react";
+import { CardContainer, CartButton, CartContainer, Tags } from "./styles";
 
 interface CardProps {
-  imgUrl: string;
-  tags: string[];
-  title: string;
-  description: string;
-  price: string;
+  coffee: {
+    id: number;
+    image_url: string;
+    tags: string[];
+    title: string;
+    description: string;
+    price: string;
+  };
 }
 
-export function Card({ imgUrl, tags, title, description, price }: CardProps) {
+export function Card({ coffee }: CardProps) {
+  const { id, image_url, title, tags, description, price } = coffee;
   return (
     <CardContainer>
-      <img src={imgUrl} alt={title} />
+      <img src={image_url} alt={title} />
       <Tags>
         {tags.map((tag) => (
           <p>{tag}</p>
@@ -21,17 +26,25 @@ export function Card({ imgUrl, tags, title, description, price }: CardProps) {
       <h3>{title}</h3>
       <p>{description}</p>
 
-      <div>
+      <CartContainer>
         <p>
           R$ <span>{price}</span>
         </p>
-        <div>
+        <CartButton>
           <div>
-            <button>-</button>0<button>+</button>
+            <button>
+              <Minus size={14} weight="bold" />
+            </button>
+            <span>0</span>
+            <button>
+              <Plus size={14} weight="bold" />
+            </button>
           </div>
-          <button>carrinho</button>
-        </div>
-      </div>
+          <button>
+            <ShoppingCartSimple weight="fill" size={22} />
+          </button>
+        </CartButton>
+      </CartContainer>
     </CardContainer>
   );
 }
