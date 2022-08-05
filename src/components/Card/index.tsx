@@ -1,4 +1,4 @@
-import { Minus, Plus, ShoppingCart, ShoppingCartSimple } from "phosphor-react";
+import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { CardContainer, CartButton, CartContainer, Tags } from "./styles";
 
 interface CardProps {
