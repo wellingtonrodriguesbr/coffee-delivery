@@ -13,7 +13,7 @@ interface CardProps {
 }
 
 export function Card({ coffee }: CardProps) {
-  const { id, image_url, title, tags, description, price } = coffee;
+  const { image_url, title, tags, description, price } = coffee;
   return (
     <CardContainer>
       <img src={image_url} alt={title} />
