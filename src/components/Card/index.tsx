@@ -18,8 +18,8 @@ export function Card({ coffee }: CardProps) {
     <CardContainer>
       <img src={image_url} alt={title} />
       <Tags>
-        {tags.map((tag) => (
-          <p>{tag}</p>
+        {tags.map((tag, index) => (
+          <p key={index}>{tag}</p>
         ))}
       </Tags>
 
