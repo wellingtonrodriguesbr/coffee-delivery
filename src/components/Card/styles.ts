@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   max-width: 16rem;
   width: 100%;
-  height: 100%;
   max-height: 19.375rem;
   display: flex;
   align-items: center;
@@ -81,18 +80,24 @@ export const CartButton = styled.div`
 
     button {
       width: 100%;
+      border: none;
       background: transparent;
       color: ${(props) => props.theme.purple};
       cursor: pointer;
     }
   }
+`;
 
-  button {
-    border: none;
-    background-color: ${(props) => props.theme["purple-dark"]};
-    color: ${(props) => props.theme["base-card"]};
-    padding: 8px;
-    border-radius: 6px;
-    cursor: pointer;
+export const ShoppingCartButton = styled.button`
+  border: none;
+  background-color: ${(props) => props.theme["purple-dark"]};
+  color: ${(props) => props.theme["base-card"]};
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.purple};
   }
 `;
