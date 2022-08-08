@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   width: 100%;
-  padding: 0 1rem;
   height: 6.5rem;
   display: flex;
   align-items: center;
@@ -34,4 +33,15 @@ export const ButtonCart = styled.button`
   padding: 8px;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s all;
+
+  &:hover {
+    color: #fff;
+    background-color: ${(props) => props.theme["yellow-dark"]};
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
