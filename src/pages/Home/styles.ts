@@ -40,7 +40,7 @@ export const ItemsDescription = styled.div`
   }
 `;
 
-export const CoffeesList = styled.div`
+export const CoffeesList = styled.main`
   margin-top: 2.75rem;
   padding-bottom: 9.81rem;
 
