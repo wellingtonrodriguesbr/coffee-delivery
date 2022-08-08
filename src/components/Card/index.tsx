@@ -1,5 +1,12 @@
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
-import { CardContainer, CartButton, CartContainer, Tags } from "./styles";
+import { useState } from "react";
+import {
+  CardContainer,
+  CartButton,
+  CartContainer,
+  ShoppingCartButton,
+  Tags,
+} from "./styles";
 
 interface CardProps {
   coffee: {
@@ -14,6 +21,16 @@ interface CardProps {
 
 export function Card({ coffee }: CardProps) {
   const { image_url, title, tags, description, price } = coffee;
+  const [totalItems, setTotalItems] = useState(0);
+
+  function handleDecrementItems() {
+    if (totalItems <= 0) {
+      setTotalItems(0);
+    } else {
+      setTotalItems((counter) => counter - 1);
+    }
+  }
+
   return (
     <CardContainer>
       <img src={image_url} alt={title} />
@@ -32,17 +49,17 @@ export function Card({ coffee }: CardProps) {
         </p>
         <CartButton>
           <div>
-            <button>
+            <button onClick={handleDecrementItems}>
               <Minus size={14} weight="bold" />
             </button>
-            <span>0</span>
-            <button>
+            <span>{totalItems}</span>
+            <button onClick={() => setTotalItems((counter) => counter + 1)}>
               <Plus size={14} weight="bold" />
             </button>
           </div>
-          <button>
+          <ShoppingCartButton>
             <ShoppingCartSimple weight="fill" size={22} />
-          </button>
+          </ShoppingCartButton>
         </CartButton>
       </CartContainer>
     </CardContainer>
