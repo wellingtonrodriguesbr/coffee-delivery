@@ -35,12 +35,61 @@ export const Container = styled.div`
 
 export const ItemsSelected = styled.div`
   display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid ${(props) => props.theme["base-button"]};
+
+  h4 {
+    font-family: "Roboto";
+    font-size: 1rem;
+    color: ${(props) => props.theme["base-text"]};
+    font-weight: bold;
+  }
+`;
+
+export const ItemsDescription = styled.div`
+  display: flex;
+
+  h3 {
+    font-size: 1rem;
+    color: ${(props) => props.theme["base-subtitle"]};
+    font-weight: 400;
+    font-family: "Roboto";
+  }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  background: ${(props) => props.theme["base-button"]};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72px;
+  height: 32px;
+  border-radius: 6px;
+
+  span {
+    color: ${(props) => props.theme["base-title"]};
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 0;
+    border: none;
+    background: transparent;
+    color: ${(props) => props.theme.purple};
+    cursor: pointer;
+  }
 `;
 
 export const Summary = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;
+  margin-top: 24px;
 
   div {
     display: flex;
