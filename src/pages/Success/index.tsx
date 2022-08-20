@@ -24,6 +24,7 @@ export function Success() {
               <p>Farrapos - Porto Alegre, RS</p>
             </p>
           </DeliveryDetailsContainer>
+
           <DeliveryDetailsContainer>
             <img src={timeImage} alt="" />
             <div>
@@ -31,6 +32,7 @@ export function Success() {
               <strong>20 min - 30 min</strong>
             </div>
           </DeliveryDetailsContainer>
+
           <DeliveryDetailsContainer>
             <img src={moneyImage} alt="" />
             <div>
