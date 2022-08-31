@@ -91,7 +91,7 @@ export const FormContainer = styled.form`
     grid-column: 2 / 5;
   }
   input:nth-child(7) {
-    max-width: 70px;
+    max-width: 60px;
   }
 
 `;
