@@ -48,6 +48,54 @@ export const BaseContainerDescription = styled.div`
   }
 `;
 
+export const FormContainer = styled.form`
+  width: 100%;
+  display: grid;
+  column-gap: 0.75rem;
+  row-gap: 1rem;
+  grid-template-columns: 12.5rem 17.25rem 3.75rem;
+
+  input {
+    width: 100%;
+    border: 1px solid ${props => props.theme["base-button"]};
+    background: ${props => props.theme["base-input"]};
+    padding: 0.75rem;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: ${props => props.theme["base-label"]};
+    }
+
+    &:focus {
+      outline: 0;
+      border: 1px solid ${props => props.theme["yellow-dark"]};
+    }
+  }
+
+  input:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+  input:nth-child(2) {
+    grid-column: 1 / 6;
+  }
+  input:nth-child(3) {
+    grid-column: 1 / 2;
+  }
+  input:nth-child(4) {
+    grid-column: 2 / 6;
+  }
+  input:nth-child(5) {
+    grid-column: 1 / 2;
+  }
+  input:nth-child(6) {
+    grid-column: 2 / 5;
+  }
+  input:nth-child(7) {
+    max-width: 70px;
+  }
+
+`;
+
 export const RadioButtonsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);

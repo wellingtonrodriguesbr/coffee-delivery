@@ -6,6 +6,7 @@ import {
   BaseContainerDescription,
   RadioButtonsContainer,
   RadioButton,
+  FormContainer,
 } from "./styles";
 
 import MapOutlined from "../../assets/icons/map-outlined.svg";
@@ -32,6 +33,15 @@ export function Checkout() {
               <p>Informe o endereço onde deseja receber seu pedido</p>
             </div>
           </BaseContainerDescription>
+          <FormContainer>
+            <input type="text" placeholder="CEP" />
+            <input type="text" placeholder="Rua" />
+            <input type="number" placeholder="Número" />
+            <input type="text" placeholder="Complemento" />
+            <input type="text" placeholder="Bairro" />
+            <input type="text" placeholder="Cidade" />
+            <input type="text" placeholder="UF" />
+          </FormContainer>
         </BaseContainerCheckout>
 
         <BaseContainerCheckout>
