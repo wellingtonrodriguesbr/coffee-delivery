@@ -7,6 +7,11 @@ import {
   RadioButtonsContainer,
   RadioButton,
   FormContainer,
+  CoffeesSelectedContent,
+  CoffeesPriceSummary,
+  CoffeesSelected,
+  Coffee,
+  ButtonsContainer,
 } from "./styles";
 
 import MapOutlined from "../../assets/icons/map-outlined.svg";
@@ -15,6 +20,7 @@ import CardCredit from "../../assets/icons/card.svg";
 import CardDebit from "../../assets/icons/card-debit.svg";
 import Dollar from "../../assets/icons/dollar.svg";
 import { useState } from "react";
+import { IncrementDecrementButton } from "../../components/IncrementDecrementButton";
 
 type PaymentMethod = "credit" | "debit" | "money";
 
@@ -84,6 +90,37 @@ export function Checkout() {
 
       <CoffeesSelectedContainer>
         <h3>Cafés selecionados</h3>
+        <CoffeesSelectedContent>
+          <CoffeesSelected>
+            <Coffee>
+              <img src="./src/assets/images/expresso.png" alt="" />
+              <div>
+                <h5>Expresso Tradicional</h5>
+                <ButtonsContainer>
+                  <IncrementDecrementButton height="32px" />
+                </ButtonsContainer>
+              </div>
+            </Coffee>
+            <p>R$ 9,90</p>
+          </CoffeesSelected>
+          <CoffeesPriceSummary>
+            <div>
+              <p>Total de itens</p>
+              <p>R$ 9,90</p>
+            </div>
+
+            <div>
+              <p>Entrega</p>
+              <p>R$ 3,50</p>
+            </div>
+
+            <div>
+              <h4>Total</h4>
+              <h4>R$ 13,40</h4>
+            </div>
+          </CoffeesPriceSummary>
+          <button>Confirmar pedido</button>
+        </CoffeesSelectedContent>
       </CoffeesSelectedContainer>
     </CheckoutContainer>
   );

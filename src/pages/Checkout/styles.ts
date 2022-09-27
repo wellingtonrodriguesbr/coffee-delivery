@@ -4,6 +4,7 @@ export const CheckoutContainer = styled.main`
   display: flex;
   justify-content: space-between;
   margin-top: 2.5rem;
+  gap: 2rem;
 `;
 
 export const DeliveryFormContainer = styled.div`
@@ -57,18 +58,18 @@ export const FormContainer = styled.form`
 
   input {
     width: 100%;
-    border: 1px solid ${props => props.theme["base-button"]};
-    background: ${props => props.theme["base-input"]};
+    border: 1px solid ${(props) => props.theme["base-button"]};
+    background: ${(props) => props.theme["base-input"]};
     padding: 0.75rem;
     border-radius: 4px;
 
     &::placeholder {
-      color: ${props => props.theme["base-label"]};
+      color: ${(props) => props.theme["base-label"]};
     }
 
     &:focus {
       outline: 0;
-      border: 1px solid ${props => props.theme["yellow-dark"]};
+      border: 1px solid ${(props) => props.theme["yellow-dark"]};
     }
   }
 
@@ -93,7 +94,6 @@ export const FormContainer = styled.form`
   input:nth-child(7) {
     max-width: 60px;
   }
-
 `;
 
 export const RadioButtonsContainer = styled.div`
@@ -142,5 +142,99 @@ export const CoffeesSelectedContainer = styled.div`
   h3 {
     color: ${(props) => props.theme["base-subtitle"]};
     font-size: 1.125rem;
+  }
+`;
+
+export const CoffeesSelectedContent = styled.div`
+  width: 28rem;
+  background-color: ${(props) => props.theme["base-card"]};
+  border-radius: 6px 44px 6px 44px;
+  padding: 2.5rem;
+
+  /* button {
+    width: 100%;
+    background-color: ${(props) => props.theme.yellow};
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: ${(props) => props.theme["yellow-dark"]};
+    }
+  } */
+`;
+
+export const CoffeesSelected = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid ${(props) => props.theme["base-button"]};
+
+  p {
+    font-weight: bold;
+    color: ${(props) => props.theme["base-text"]};
+    font-size: 1rem;
+  }
+`;
+
+export const Coffee = styled.div`
+  display: flex;
+  gap: 1.25rem;
+
+  img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  div {
+    h5 {
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 1rem;
+      color: ${(props) => props.theme["base-subtitle"]};
+    }
+  }
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+`;
+
+export const CoffeesPriceSummary = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      color: ${(props) => props.theme["base-text"]};
+      font-size: 0.875rem;
+
+      &:last-child {
+        font-size: 1rem;
+      }
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      font-family: "Roboto";
+      color: ${(props) => props.theme["base-subtitle"]};
+    }
   }
 `;
