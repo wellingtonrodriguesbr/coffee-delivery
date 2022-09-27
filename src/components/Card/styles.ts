@@ -64,28 +64,6 @@ export const CartContainer = styled.div`
 export const CartButton = styled.div`
   display: flex;
   gap: 8px;
-
-  div {
-    background: ${(props) => props.theme["base-button"]};
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 72px;
-    border-radius: 6px;
-
-    span {
-      color: ${(props) => props.theme["base-title"]};
-      font-size: 1rem;
-    }
-
-    button {
-      width: 100%;
-      border: none;
-      background: transparent;
-      color: ${(props) => props.theme.purple};
-      cursor: pointer;
-    }
-  }
 `;
 
 export const ShoppingCartButton = styled.button`

@@ -1,5 +1,6 @@
 import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
 import { useState } from "react";
+import { IncrementDecrementButton } from "../IncrementDecrementButton";
 import {
   CardContainer,
   CartButton,
@@ -21,15 +22,6 @@ interface CardProps {
 
 export function Card({ coffee }: CardProps) {
   const { image_url, title, tags, description, price } = coffee;
-  const [totalItems, setTotalItems] = useState(0);
-
-  function handleDecrementItems() {
-    if (totalItems <= 0) {
-      setTotalItems(0);
-    } else {
-      setTotalItems((counter) => counter - 1);
-    }
-  }
 
   return (
     <CardContainer>
@@ -48,15 +40,7 @@ export function Card({ coffee }: CardProps) {
           R$ <span>{price}</span>
         </p>
         <CartButton>
-          <div>
-            <button onClick={handleDecrementItems}>
-              <Minus size={14} weight="bold" />
-            </button>
-            <span>{totalItems}</span>
-            <button onClick={() => setTotalItems((counter) => counter + 1)}>
-              <Plus size={14} weight="bold" />
-            </button>
-          </div>
+          <IncrementDecrementButton height="auto" />
           <ShoppingCartButton>
             <ShoppingCartSimple weight="fill" size={22} />
           </ShoppingCartButton>
