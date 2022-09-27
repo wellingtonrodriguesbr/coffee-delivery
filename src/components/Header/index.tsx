@@ -19,11 +19,11 @@ export function Header() {
           <MapPin weight="fill" size={22} />
           Porto Alegre, RS
         </ButtonAddress>
-        <ButtonCart>
-          <NavLink to="/checkout">
+        <NavLink to="/checkout">
+          <ButtonCart>
             <ShoppingCart weight="fill" size={22} />
-          </NavLink>
-        </ButtonCart>
+          </ButtonCart>
+        </NavLink>
       </ShoppingCartContainer>
     </HeaderContainer>
   );
