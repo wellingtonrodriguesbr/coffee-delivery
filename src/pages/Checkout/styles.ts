@@ -89,10 +89,10 @@ export const FormContainer = styled.form`
     grid-column: 1 / 2;
   }
   input:nth-child(6) {
-    grid-column: 2 / 5;
+    grid-column: 2 / 3;
   }
   input:nth-child(7) {
-    max-width: 60px;
+    grid-column: 3 / 6;
   }
 `;
 
@@ -150,27 +150,28 @@ export const CoffeesSelectedContent = styled.div`
   background-color: ${(props) => props.theme["base-card"]};
   border-radius: 6px 44px 6px 44px;
   padding: 2.5rem;
+`;
 
-  /* button {
-    width: 100%;
-    background-color: ${(props) => props.theme.yellow};
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5rem;
-    border: none;
-    font-weight: bold;
-    color: #fff;
-    border-radius: 6px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.3s;
+export const FinalOrderButton = styled.button`
+  width: 100%;
+  height: 2.875rem;
+  background-color: ${(props) => props.theme.yellow};
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
 
-    &:hover {
-      background-color: ${(props) => props.theme["yellow-dark"]};
-    }
-  } */
+  &:hover {
+    background-color: ${(props) => props.theme["yellow-dark"]};
+  }
 `;
 
 export const CoffeesSelected = styled.div`

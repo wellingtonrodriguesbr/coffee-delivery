@@ -12,6 +12,7 @@ import {
   CoffeesSelected,
   Coffee,
   ButtonsContainer,
+  FinalOrderButton,
 } from "./styles";
 
 import MapOutlined from "../../assets/icons/map-outlined.svg";
@@ -119,7 +120,7 @@ export function Checkout() {
               <h4>R$ 13,40</h4>
             </div>
           </CoffeesPriceSummary>
-          <button>Confirmar pedido</button>
+          <FinalOrderButton>Confirmar pedido</FinalOrderButton>
         </CoffeesSelectedContent>
       </CoffeesSelectedContainer>
     </CheckoutContainer>
