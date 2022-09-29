@@ -22,6 +22,7 @@ import CardDebit from "../../assets/icons/card-debit.svg";
 import Dollar from "../../assets/icons/dollar.svg";
 import { useState } from "react";
 import { IncrementDecrementButton } from "../../components/IncrementDecrementButton";
+import { DeleteButton } from "../../components/DeleteButton";
 
 type PaymentMethod = "credit" | "debit" | "money";
 
@@ -99,6 +100,7 @@ export function Checkout() {
                 <h5>Expresso Tradicional</h5>
                 <ButtonsContainer>
                   <IncrementDecrementButton height="32px" />
+                  <DeleteButton />
                 </ButtonsContainer>
               </div>
             </Coffee>
