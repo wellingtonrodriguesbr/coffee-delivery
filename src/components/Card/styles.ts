@@ -65,17 +65,3 @@ export const CartButton = styled.div`
   display: flex;
   gap: 8px;
 `;
-
-export const ShoppingCartButton = styled.button`
-  border: none;
-  background-color: ${(props) => props.theme["purple-dark"]};
-  color: ${(props) => props.theme["base-card"]};
-  padding: 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover {
-    background-color: ${(props) => props.theme.purple};
-  }
-`;

@@ -25,23 +25,3 @@ export const ButtonAddress = styled.button`
   font-size: 1rem;
   border-radius: 6px;
 `;
-
-export const ButtonCart = styled.button`
-  background-color: ${(props) => props.theme["yellow-light"]};
-  color: ${(props) => props.theme["yellow-dark"]};
-  border: none;
-  padding: 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s all;
-
-  &:hover {
-    color: #fff;
-    background-color: ${(props) => props.theme["yellow-dark"]};
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;

@@ -1,13 +1,7 @@
-import { Minus, Plus, ShoppingCartSimple } from "phosphor-react";
-import { useState } from "react";
+import { ShoppingCartSimple } from "phosphor-react";
 import { IncrementDecrementButton } from "../IncrementDecrementButton";
-import {
-  CardContainer,
-  CartButton,
-  CartContainer,
-  ShoppingCartButton,
-  Tags,
-} from "./styles";
+import { ShoppingCartButton } from "../ShoppingCartButton";
+import { CardContainer, CartButton, CartContainer, Tags } from "./styles";
 
 interface CardProps {
   coffee: {
@@ -41,9 +35,11 @@ export function Card({ coffee }: CardProps) {
         </p>
         <CartButton>
           <IncrementDecrementButton height="auto" />
-          <ShoppingCartButton>
-            <ShoppingCartSimple weight="fill" size={22} />
-          </ShoppingCartButton>
+          <ShoppingCartButton
+            background="purple-dark"
+            color="white"
+            icon={<ShoppingCartSimple weight="fill" size={22} />}
+          />
         </CartButton>
       </CartContainer>
     </CardContainer>

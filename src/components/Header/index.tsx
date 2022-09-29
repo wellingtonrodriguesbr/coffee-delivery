@@ -1,12 +1,13 @@
 import {
   ButtonAddress,
-  ButtonCart,
   HeaderContainer,
   ShoppingCartContainer,
 } from "./styles";
 import Logo from "../../assets/Logo.svg";
-import { MapPin, ShoppingCart } from "phosphor-react";
+import { MapPin } from "phosphor-react";
 import { NavLink } from "react-router-dom";
+import { ShoppingCartButton } from "../ShoppingCartButton";
+import { ShoppingCart } from "phosphor-react";
 
 export function Header() {
   return (
@@ -20,9 +21,11 @@ export function Header() {
           Porto Alegre, RS
         </ButtonAddress>
         <NavLink to="/checkout">
-          <ButtonCart>
-            <ShoppingCart weight="fill" size={22} />
-          </ButtonCart>
+          <ShoppingCartButton
+            background="yellow-light"
+            color="yellow-dark"
+            icon={<ShoppingCart weight="fill" size={22} />}
+          />
         </NavLink>
       </ShoppingCartContainer>
     </HeaderContainer>
