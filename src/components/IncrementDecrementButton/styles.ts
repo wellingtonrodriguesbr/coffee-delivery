@@ -25,5 +25,9 @@ export const ButtonContainer = styled.div<HeightButtonProps>`
     background: transparent;
     color: ${(props) => props.theme.purple};
     cursor: pointer;
+
+    &:hover {
+      color: ${(props) => props.theme["purple-dark"]};
+    }
   }
 `;
